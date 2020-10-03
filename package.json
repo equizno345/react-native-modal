@@ -14,6 +14,7 @@
     "build": "tsc",
     "dev": "tsc --watch",
     "test:ts": "tsc --noEmit",
+    "prepare": "npm run build",
     "build:e2e:android:debug": "detox build -c android.emu.debug",
     "build:e2e:android:release": "detox build -c android.emu.release",
     "test:e2e:android:debug": "detox test -c android.emu.debug",
