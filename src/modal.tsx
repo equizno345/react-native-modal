@@ -297,6 +297,10 @@ export class ReactNativeModal extends React.Component<ModalProps, State> {
       // On modal close request, we slide the view down and fade out the backdrop
       this.close();
     }
+    if(prevProps.swipeDirection != this.props.swipeDirection) {
+      const isSwipeable = this.props.swipeDirection ? true : false
+      this.setState({ isSwipeable })
+    }
   }
   getDeviceHeight = () => this.props.deviceHeight || this.state.deviceHeight;
   getDeviceWidth = () => this.props.deviceWidth || this.state.deviceWidth;
